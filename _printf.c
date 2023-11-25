@@ -13,7 +13,7 @@
 int (*router(char c))(va_list, char *, int)
 {
 print_t ops[] = {
-{'%', print_percent},
+{'%', print_perc},
 {'c', print_char},
 {'s', print_string},
 {'d', print_int},
