@@ -1,4 +1,5 @@
 #include "main.h"
+#include "formatters.c"
 /**
 *router -  checks input string for format type
 *@fmt: character
