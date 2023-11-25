@@ -77,8 +77,9 @@ return (s);
 
 /**
 * printf_perc - prints percentage
-* @count - arguments counts
+* @count: arguments counts
 *
+* Return: count
 */
 
 int printf_perc(void)
@@ -94,6 +95,7 @@ write(1, "%", 1);
 
 count++;
 }
+￼
 else
 {
 write(1, format, 1);
@@ -101,5 +103,5 @@ count++;
 }
 format++;
 }
-
+return (count);
 }
