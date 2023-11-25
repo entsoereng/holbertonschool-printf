@@ -49,10 +49,12 @@ int _printf(const char *format, ...)
                 }
             }
         }
+
+        /* Move the write statement inside the block */
+        write(1, buffer, index);
     }
 
     va_end(ap);
 
-    write(1, buffer, index);
     return index;
 }
