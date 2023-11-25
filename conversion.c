@@ -76,7 +76,7 @@ return (s);
 }
 
 /**
-* _printf - prints percentage
+* printf_perc - prints percentage
 * @count - arguments counts
 *
 */
