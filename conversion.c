@@ -74,3 +74,32 @@ s = int_string(b);
 
 return (s);
 }
+
+/**
+* _printf - prints percentage
+* @count - arguments counts
+*
+*/
+
+int printf_perc(void)
+{
+
+int count = 0;
+
+while (*format)
+{
+if (*format == '%')
+{
+write(1, "%", 1);
+
+count++;
+}
+else
+{
+write(1, format, 1);
+count++;
+}
+format++;
+}
+
+}
