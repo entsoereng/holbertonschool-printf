@@ -15,12 +15,13 @@ int _printf(const char *format, ...)
     if (format == NULL)
         return -1;
 
+    int index = 0;
+    int (*routing)(va_list, char *, int);
+    
     va_list ap;
     va_start(ap, format);
 
     char buffer[1024];
-    int index = 0;
-    int (*routing)(va_list, char *, int);
 
     int i;
     for (i = 0; format[i] != '\0'; i++)
