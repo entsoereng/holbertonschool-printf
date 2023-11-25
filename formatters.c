@@ -1,3 +1,7 @@
+/**
+* Authors - Emmanuel Ntsoereng, Tankiso Fuma and Reabetsoe Ramoshabe.
+*/
+
 #include <stdarg.h>
 #include "main.h"
 
