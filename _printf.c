@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include "main.h"print_
 
 /**
 * router - selects the appropriate function to perform the operation
@@ -13,7 +13,7 @@
 int (*router(char c))(va_list, char *, int)
 {
 print_t ops[] = {
-{'%', print_perc},
+{'%', print_percent},
 {'c', print_char},
 {'s', print_string},
 {'d', print_int},
