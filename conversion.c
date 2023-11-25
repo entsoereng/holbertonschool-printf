@@ -82,7 +82,7 @@ return (s);
 * Return: count
 */
 
-int print_percent(const char *format)
+int print_char(const char *format)
 {
 int count = 0;
 
