@@ -12,37 +12,41 @@
  */
 int _printf(const char *format, ...)
 {
+    va_list ap;
+    int index;
+
     if (format == NULL)
         return -1;
 
-    va_list ap;
-    int index = 0;
-    int (*routing)(va_list, char *, int);
-
     va_start(ap, format);
 
-    char buffer[1024];
-
-    int i;
-    for (i = 0; format[i] != '\0'; i++)
+    index = 0;
     {
-        if (format[i] != '%')
+        int (*routing)(va_list, char *, int);
+
+        char buffer[1024];
+
+        int i;
+        for (i = 0; format[i] != '\0'; i++)
         {
-            buffer[index] = format[i];
-            index++;
-        }
-        else if (format[i + 1] != '\0')
-        {
-            routing = router(format[i + 1]);
-            if (routing != NULL)
+            if (format[i] != '%')
             {
-                index = routing(ap, buffer, index);
-                i++;
-            }
-            else
-            {
-                buffer[index] = '%';
+                buffer[index] = format[i];
                 index++;
+            }
+            else if (format[i + 1] != '\0')
+            {
+                routing = router(format[i + 1]);
+                if (routing != NULL)
+                {
+                    index = routing(ap, buffer, index);
+                    i++;
+                }
+                else
+                {
+                    buffer[index] = '%';
+                    index++;
+                }
             }
         }
     }
