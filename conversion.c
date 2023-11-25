@@ -76,13 +76,29 @@ return (s);
 }
 
 /**
-* print_percent - prints percentage
+* printf_perc - prints percentage
+* @count: arguments counts
 *
 * Return: count
 */
 
-int print_percent(void)
+int print_percent(const char *format)
 {
-write(1, '%', 1);
-return (1);
+int count = 0;
+
+while (*format)
+{
+if (*format == '%')
+{
+write(1, "%", 1);
+count++;
+}
+else
+{
+write(1, format, 1);
+count++;
+}
+format++;
+}
+return count;
 }
