@@ -74,31 +74,3 @@ s = int_string(b);
 
 return (s);
 }
-
-/**
-* printf_perc - prints percentage
-* @count: arguments counts
-*
-* Return: count
-*/
-
-int print_percent(const char *format)
-{
-int count = 0;
-
-while (*format)
-{
-if (*format == '%')
-{
-write(1, "%", 1);
-count++;
-}
-else
-{
-write(1, format, 1);
-count++;
-}
-format++;
-}
-return count;
-}
