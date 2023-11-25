@@ -1,6 +1,6 @@
 #include "main.h"
+#include "formatter_functions.h"
 
-/* Define the router function here (do not include the entire formatters.c file) */
 int (*router(char fmt))(va_list, char *, int)
 {
     int i;
