@@ -14,7 +14,7 @@ int buffer_string(va_list ap, char *buffer, int index)
 
     if (s == NULL)
     {
-    
+        /* Handle NULL string */
         index = _strcpy(buffer, "(null)", index);
     }
     else
