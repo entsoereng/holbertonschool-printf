@@ -1,31 +1,27 @@
 #include "main.h"
-#include "formatters.c"
-/**
-*router -  checks input string for format type
-*@fmt: character
-*Return: 0 on success
-*/
+
+/* Define the router function here (do not include the entire formatters.c file) */
 int (*router(char fmt))(va_list, char *, int)
 {
-int i;
-routes router[] = {
-{'s', buffer_string},
-{'c', buffer_char},
-{'i', buffer_int},
-{'d', buffer_int},
-{'b', buffer_int_b},
-{'\0', NULL}
-};
+    int i;
+    routes router[] = {
+        {'s', buffer_string},
+        {'c', buffer_char},
+        {'i', buffer_int},
+        {'d', buffer_int},
+        {'b', buffer_int_b},
+        {'\0', NULL}
+    };
 
-i = 0;
+    i = 0;
 
-while (router[i].c != '\0')
-{
-if (router[i].c == fmt)
-return (router[i].f);
+    while (router[i].c != '\0')
+    {
+        if (router[i].c == fmt)
+            return router[i].f;
 
-i++;
-}
+        i++;
+    }
 
-return (0);
+    return NULL;
 }
