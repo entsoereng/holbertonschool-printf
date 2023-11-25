@@ -1,12 +1,9 @@
-/**
-* Authors - Emmanuel Ntsoereng, Tankiso Fuma and Reabetsoe Ramoshabe.
-*/
-
 #include "main.h"
+
 /**
-*router -  checks input string for format type
-*@fmt: character
-*Return: 0 on success
+* router - checks input string for format type
+* @fmt: character
+* Return: 0 on success
 */
 int (*router(char fmt))(va_list, char *, int)
 {

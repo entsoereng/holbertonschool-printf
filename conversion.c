@@ -1,7 +1,3 @@
-/**
-* Authors - Emmanuel Ntsoereng, Tankiso Fuma and Reabetsoe Ramoshabe.
-*/
-
 #include "main.h"
 /**
 * int_string - checks _printf input

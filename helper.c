@@ -1,8 +1,5 @@
-/**
-* Authors - Emmanuel Ntsoereng, Tankiso Fuma and Reabetsoe Ramoshabe.
-*/
-
 #include "main.h"
+
 /**
 * _strcpy - copy from one to another
 * @buffer: to buffer

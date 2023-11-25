@@ -20,7 +20,7 @@ char buffer[1024];
 va_list ap;
 
 if (format == NULL)
-return -1;
+return (-1);
 
 va_start(ap, format);
 
@@ -50,5 +50,5 @@ index++;
 va_end(ap);
 
 write(1, buffer, index);
-return index;
+return (index);
 }
