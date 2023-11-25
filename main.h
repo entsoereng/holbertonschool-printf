@@ -4,7 +4,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "base_struct.h"
-int print_perc(void);
 int _strlen(char *s);
 int _strcpy(char *buffer, char *from, int index);
 char *int_string(int n);
