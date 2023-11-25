@@ -41,9 +41,10 @@ i++;
 }
 else
 {
-buffer[index] = '%';
+buffer[index] = format[i];
 index++;
 }
+
 }
 }
 
