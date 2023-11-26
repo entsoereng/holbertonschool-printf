@@ -12,6 +12,7 @@ routes router[] = {
 {'s', buffer_string},
 {'c', buffer_char},
 {'i', buffer_int},
+{'%', print_percent},
 {'d', buffer_int},
 {'b', buffer_int_b},
 {'\0', NULL}
