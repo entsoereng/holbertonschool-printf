@@ -1,5 +1,10 @@
 #include "main.h"
 #include "formatter_functions.h"
+/**
+*router -  checks input string for format type
+*@fmt: character
+*Return: 0 on success
+*/
 
 int (*router(char fmt))(va_list, char *, int)
 {
